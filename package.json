@@ -1,0 +1,41 @@
+{
+  "name": "create-windowless-app-template",
+  "version": "0.1.0",
+  "private": true,
+  "main": "_build/index.js",
+  "dependencies": {
+    "node-notifier": "10.0.0",
+    "winston": "3.3.3"
+  },
+  "devDependencies": {
+    "@types/cross-spawn": "6.0.2",
+    "@types/jest": "27.0.1",
+    "@types/node": "16.9.1",
+    "@types/node-notifier": "8.0.1",
+    "@types/winston": "2.4.4",
+    "copy-webpack-plugin": "9.0.1",
+    "cross-spawn": "7.0.3",
+    "fs-extra": "10.0.0",
+    "husky": "7.0.2",
+    "jest": "27.1.1",
+    "nexe": "4.0.0-beta.18",
+    "rimraf": "3.0.2",
+    "ts-loader": "9.2.5",
+    "ts-node": "10.2.1",
+    "typescript": "4.4.3",
+    "webpack": "5.52.1",
+    "webpack-cli": "4.8.0"
+  },
+  "scripts": {
+    "start": "ts-node src/index.ts",
+    "type-check": "tsc --build tsconfig.all.json",
+    "prewebpack": "rimraf build && rimraf dist",
+    "webpack": "webpack",
+    "nexe": "nexe -t windows-x64-14.15.3 -o dist/create-windowless-app-template.exe",
+    "build": "npm run type-check && npm run webpack && npm run nexe",
+    "check-msbuild": "ts-node -e \"require(\"\"./launcher/launcherCompiler\"\").checkMsbuildInPath(true)\"",
+    "rebuild-launcher": "msbuild launcher/launcher.csproj",
+    "prepare": "git config --get core.hookspath || husky install",
+    "pre-commit": "git diff HEAD --exit-code --stat launcher/* || npm run check-msbuild && npm run rebuild-launcher && git add resources/bin/create-windowless-app-template-launcher.exe"
+  }
+}
