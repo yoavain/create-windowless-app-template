@@ -4,7 +4,7 @@
   "private": true,
   "main": "_build/index.js",
   "dependencies": {
-    "node-notifier": "10.0.0",
+    "node-notifier": "9.0.1",
     "winston": "3.3.3"
   },
   "devDependencies": {
