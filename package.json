@@ -8,9 +8,10 @@
     "winston": "3.3.3"
   },
   "devDependencies": {
+    "@tsconfig/node12": "1.0.9",
     "@types/cross-spawn": "6.0.2",
     "@types/jest": "27.0.2",
-    "@types/node": "16.10.4",
+    "@types/node": "16.10.8",
     "@types/node-notifier": "8.0.1",
     "@types/winston": "2.4.4",
     "copy-webpack-plugin": "9.0.1",
@@ -23,12 +24,12 @@
     "ts-loader": "9.2.6",
     "ts-node": "10.3.0",
     "typescript": "4.4.4",
-    "webpack": "5.58.1",
+    "webpack": "5.58.2",
     "webpack-cli": "4.9.0"
   },
   "scripts": {
     "start": "ts-node src/index.ts",
-    "type-check": "tsc --build tsconfig.all.json",
+    "type-check": "tsc --build tsconfig.json",
     "prewebpack": "rimraf build && rimraf dist",
     "webpack": "webpack",
     "nexe": "nexe -t windows-x64-14.15.3 -o dist/create-windowless-app-template.exe",
