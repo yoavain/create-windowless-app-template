@@ -1,17 +1,17 @@
 {
   "name": "create-windowless-app-template",
-  "version": "0.1.0",
+  "version": "7.11.0",
   "private": true,
   "main": "_build/index.js",
   "dependencies": {
-    "node-notifier": "9.0.1",
+    "node-notifier": "10.0.1",
     "winston": "3.5.1"
   },
   "devDependencies": {
     "@tsconfig/node12": "1.0.9",
     "@types/cross-spawn": "6.0.2",
     "@types/jest": "27.4.0",
-    "@types/node": "17.0.13",
+    "@types/node": "17.0.14",
     "@types/node-notifier": "8.0.2",
     "@types/winston": "2.4.4",
     "copy-webpack-plugin": "10.2.4",
