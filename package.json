@@ -5,7 +5,7 @@
   "main": "_build/index.js",
   "dependencies": {
     "node-notifier": "10.0.1",
-    "winston": "3.7.1"
+    "winston": "3.7.2"
   },
   "devDependencies": {
     "@tsconfig/node12": "1.0.9",
