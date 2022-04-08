@@ -57,6 +57,8 @@ jobs:
 
       - name: Check if changed from main
         run: |
+          echo "TESTCHANGED=true" >> $GITHUB_ENV
+          echo TESTCHANGED: ${{ env.TESTCHANGED }}
           git diff --quiet HEAD main -- npm-update --exit-code || echo "CHANGED=true" >> $GITHUB_ENV
           echo Changed: ${{ env.CHANGED }}
         env:
