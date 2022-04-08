@@ -53,7 +53,7 @@ jobs:
       - name: Commit generated files
         run: |
           git add package*.json || true
-          git commit -m 'Updated dependencies' || true
+          git commit -m "Updated dependencies" || true
 
       - name: Check if changed from main
         run: |
