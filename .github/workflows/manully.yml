@@ -62,7 +62,7 @@ jobs:
 
       - name: Check if changed from main
         run: |
-          git diff --quiet HEAD main -- npm-update --exit-code || echo "CHANGED=true" >> $GITHUB_ENV
+          git diff --quiet HEAD main -- "package*.json" --exit-code || echo "CHANGED=true" >> $GITHUB_ENV
           echo Changed: ${{ env.CHANGED }}
         env:
           CI: true
