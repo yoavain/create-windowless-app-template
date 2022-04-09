@@ -1,4 +1,4 @@
-name: Test env vars
+name: Manually
 
 on:
   workflow_dispatch:
