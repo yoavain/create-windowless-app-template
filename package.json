@@ -36,7 +36,8 @@
     "build": "npm run type-check && npm run webpack && npm run nexe",
     "check-msbuild": "ts-node -e \"require(\"\"./launcher/launcherCompiler\"\").checkMsbuildInPath(true)\"",
     "rebuild-launcher": "msbuild launcher/launcher.csproj",
-    "prepare": "git config --get core.hookspath || husky install",
+	"prepare": "npm run husky-install && npx fix-lockfile-integrity package-lock.json",
+	"husky-install": "git config --get core.hookspath || husky install",
     "pre-commit": "git diff HEAD --exit-code --stat launcher/* || npm run check-msbuild && npm run rebuild-launcher && git add resources/bin/create-windowless-app-template-launcher.exe"
   }
 }
