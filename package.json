@@ -11,7 +11,7 @@
     "@tsconfig/node12": "1.0.11",
     "@types/cross-spawn": "6.0.2",
     "@types/jest": "29.2.4",
-    "@types/node": "18.11.17",
+    "@types/node": "18.11.18",
     "@types/node-notifier": "8.0.2",
     "@types/winston": "2.4.4",
     "copy-webpack-plugin": "11.0.0",
