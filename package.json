@@ -1,6 +1,6 @@
 {
   "name": "create-windowless-app-template",
-  "version": "0.1.0",
+  "version": "10.0.3",
   "private": true,
   "main": "_build/index.js",
   "dependencies": {
