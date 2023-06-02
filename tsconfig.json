@@ -1,12 +1,12 @@
 {
-  "extends": "@tsconfig/node12/tsconfig.json",
+  "extends": "@tsconfig/node14",
   "compilerOptions": {
     "strict": false,
     "esModuleInterop": true,
     "allowJs": true,
     "target": "es6",
     "noEmit": true,
-    "importsNotUsedAsValues": "error"
+    "verbatimModuleSyntax": false
   },
   "include": [
     "./src/**/*",
