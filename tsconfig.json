@@ -1,15 +1,12 @@
 {
-  "extends": "@tsconfig/node14",
-  "compilerOptions": {
-    "strict": false,
-    "esModuleInterop": true,
-    "allowJs": true,
-    "target": "es6",
-    "noEmit": true,
-    "verbatimModuleSyntax": false
-  },
-  "include": [
-    "./src/**/*",
-    "./webpack.config.ts"
-  ]
+    "extends": "@tsconfig/node20",
+    "compilerOptions": {
+        "strict": false,
+        "esModuleInterop": true,
+        "allowJs": true,
+        "target": "es6",
+        "noEmit": true,
+        "verbatimModuleSyntax": false
+    },
+    "include": ["./src/**/*.ts", "./launcher/**/*.ts", "./utils/**/*.ts", "./webpack.config.ts"]
 }
