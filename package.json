@@ -1,6 +1,6 @@
 {
   "name": "create-windowless-app-template",
-  "version": "11.0.0",
+  "version": "11.0.3",
   "private": true,
   "main": "_build/index.js",
   "scripts": {
@@ -20,31 +20,31 @@
     "node-sea:inject-blob": "postject dist/create-windowless-app-template.exe NODE_SEA_BLOB _blob\\sea-prep.blob --sentinel-fuse NODE_SEA_FUSE_fce680ab2cc467b6e072b8b5df1996b2",
     "node-sea:sign": "signtool sign /fd SHA256 dist/create-windowless-app-template.exe",
     "node-sea": "npm run node-sea:build-blob && npm run node-sea:copy-node && npm run node-sea:unsign && npm run node-sea:inject-blob",
-    "prepare": "git config --get core.hookspath || husky install",
+    "prepare": "git config --get core.hookspath || husky",
     "pre-commit": "git diff HEAD --exit-code --stat launcher/* || npm run check-msbuild && npm run rebuild-launcher && git add resources/bin/create-windowless-app-template-launcher.exe"
   },
   "dependencies": {
     "node-notifier": "10.0.1",
-    "winston": "3.10.0"
+    "winston": "3.13.0"
   },
   "devDependencies": {
-    "@tsconfig/node20": "20.1.2",
-    "@types/cross-spawn": "6.0.3",
-    "@types/jest": "29.5.4",
-    "@types/node": "20.6.0",
-    "@types/node-notifier": "8.0.2",
+    "@tsconfig/node20": "20.1.4",
+    "@types/cross-spawn": "6.0.6",
+    "@types/jest": "29.5.12",
+    "@types/node": "20.12.8",
+    "@types/node-notifier": "8.0.5",
     "@types/winston": "2.4.4",
-    "copy-webpack-plugin": "11.0.0",
+    "copy-webpack-plugin": "12.0.2",
     "cross-spawn": "7.0.3",
-    "fs-extra": "11.1.1",
-    "husky": "8.0.3",
+    "fs-extra": "11.2.0",
+    "husky": "9.0.11",
     "jest": "29.7.0",
     "postject": "1.0.0-alpha.6",
-    "rimraf": "5.0.1",
-    "ts-loader": "9.4.4",
-    "ts-node": "10.9.1",
-    "typescript": "5.2.2",
-    "webpack": "5.88.2",
+    "rimraf": "5.0.5",
+    "ts-loader": "9.5.1",
+    "ts-node": "10.9.2",
+    "typescript": "5.4.5",
+    "webpack": "5.91.0",
     "webpack-cli": "5.1.4"
   }
 }
