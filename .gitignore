@@ -4,3 +4,6 @@
 /_build/
 /dist/
 /create-windowless-app-template.log
+/tsconfig.tsbuildinfo
+/.qodo/
+/_blob/

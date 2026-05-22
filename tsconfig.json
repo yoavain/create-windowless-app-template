@@ -1,12 +1,17 @@
 {
-    "extends": "@tsconfig/node20",
     "compilerOptions": {
+        "lib": ["es2023"],
+        "module": "node16",
+        "moduleResolution": "node16",
+        "target": "es6",
         "strict": false,
         "esModuleInterop": true,
+        "skipLibCheck": true,
+        "forceConsistentCasingInFileNames": true,
         "allowJs": true,
-        "target": "es6",
         "noEmit": true,
-        "verbatimModuleSyntax": false
+        "verbatimModuleSyntax": false,
+        "types": ["node"]
     },
     "include": ["./src/**/*.ts", "./launcher/**/*.ts", "./utils/**/*.ts", "./webpack.config.ts"]
 }
